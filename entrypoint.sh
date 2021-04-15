@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Hello $1"
-#select-java 11
-#time=`java -version`
-time=$(date)
-echo ::set-output name=time::$time
+echo "Input java version: $1"
+echo "test command: $2"
+eval select-java \${$1}
+eval $2
+
