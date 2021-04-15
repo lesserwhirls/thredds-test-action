@@ -1,0 +1,15 @@
+name: 'THREDDS Test'
+description: 'Test Action for the various THREDDS projects'
+inputs:
+  who-to-greet:  # id of input
+    java-version: 'Version of Java to use to run tests'
+    required: true
+    default: '11'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
