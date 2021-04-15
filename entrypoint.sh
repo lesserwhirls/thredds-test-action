@@ -2,6 +2,6 @@
 
 echo "Input java version: $1"
 echo "test command: $2"
-eval select-java \${$1}
-eval $2
+eval "java-select \${$1}"
+eval "$2"
 
