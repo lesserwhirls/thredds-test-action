@@ -1,10 +1,11 @@
-name: 'THREDDS Test'
-description: 'Test Action for the various THREDDS projects'
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
 inputs:
   who-to-greet:  # id of input
-    java-version: 'Version of Java to use to run tests'
+    description: 'Who to greet'
     required: true
-    default: '11'
+    default: 'World'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -13,3 +14,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.who-to-greet }}
+
